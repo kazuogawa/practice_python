@@ -12,6 +12,7 @@ class Diagram:
         self.height = height
 
     def add(self, component: Union[Text, Rectangle]):
+        # enumerate...index番号, 要素のtupleを渡してくれる
         for y, row in enumerate(component.rows):
             for x, char in enumerate(row):
                 self.diagram[y + component.y][x + component.x] = char
